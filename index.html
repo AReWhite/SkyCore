@@ -1,25 +1,134 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>弱智胡兆霜</title>
-    </head>
-    <body>
-        <h1>胡兆霜个人简介</h1>
-        <h6>Html By ReWhite</h6>
-        <h6>这是一个最好的时代，<br>
-            科技的发展给予了每个人创造价值的可能性；<br>
-            这也是一个最充满想象的时代，<br>
-            每一位心怀梦想的人，终会奔向星辰大海。<br>
-            胡兆双除外<br>
-            </h6>
-        <P><span style="background-color: aqua;">胡兆霜</span>作为<b><i>男同圈</i></b> 开天辟地的代表性人物，他的<I><b><u>逆天程度</u></b></I>毋庸置疑</P>
-        <p>并且他还喜欢玩<i><b><u>原神</u></b></i>（总是高喊原神启动!)，什么成分就不用多说了</p>
-        <P>胡兆霜对<b><i>字母圈</i></b> 也了解颇深，因此他非常渴望有个主人可以调教他</P>
-        <a href="https://www.bilibili.com/video/BV1GJ411x7h7/?p=1&share_medium=iphone&share_plat=ios&share_source=COPY&share_tag=s_i&timestamp=1605122981&unique_k=zrX90j&share_times=2" target="_blank">点击查看胡兆霜高清无码裸照</a>
-        <br>
-        <a href="https://www.codac.org.cn/" target="_blank">点击查看胡兆霜大头照</a>
-        <br>
-        <a href="https://www.baidu.com/" target="_blank">点击查看胡兆霜大头照</a>
-    </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>WhiteSky</title>
+  <style>
+    /* 样式 */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s;
+    }
+    
+    .popup.active {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.3s;
+    }
+    
+    .popup-content {
+      max-width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 16px;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>WhiteSky</h1>
+    
+    <button class="button" onclick="showPopup()">按钮</button>
+    
+    <div class="overlay" onclick="hidePopup()"></div>
+    
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <p id="message">这里是弹窗内容</p>
+        <span class="popup-close" onclick="hidePopup()">X</span>
+      </div>
+    </div>
+    
+    <div class="footer">
+      版权所有 &copy; 2023 AReWhite
+    </div>
+  </div>
+  
+  <script>
+    function showPopup() {
+      const messages = [
+        "这是第一条消息",
+        "这是第二条消息",
+        "这是第三条消息"
+      ];
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      const message = messages[randomIndex];
+      document.getElementById("message").textContent = message;
+
+      document.getElementById("popup").classList.add("active");
+      document.getElementsByClassName("overlay")[0].style.display = "block";
+    }
+    
+    function hidePopup() {
+      document.getElementById("popup").classList.remove("active");
+      document.getElementsByClassName("overlay")[0].style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("popup")) {
+        hidePopup();
+      }
+    }
+  </script>
+  
+</body>
 </html>
